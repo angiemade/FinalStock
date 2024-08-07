@@ -304,7 +304,7 @@ const Filtros = () => {
                     ))}
                 </tbody>
             </table>
-            <ContactForm />
+            {/* <ContactForm /> */}
         </div>
     );
 };
@@ -503,35 +503,39 @@ const FiltrosU = () => {
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Código"
                     value={codigo}
                     onChange={(e) => setCodigo(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Nombre"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Precio Venta"
                     value={precioventa}
                     onChange={(e) => setPrecioVenta(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Precio Compra"
                     value={preciocompra}
                     onChange={(e) => setPrecioCompra(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
@@ -562,7 +566,6 @@ const FiltrosU = () => {
                 <tbody>
                     {filteredFiltros.map(filtro => (
                         <tr key={filtro.id} className={filtro.stock <= 5 ? 'table-danger' : ''}>
-                            {/* Añadir clase 'table-danger' si el stock es menor o igual a 5 */}
                             <td>{filtro.codigo}</td>
                             <td>{filtro.nombre}</td>
                             <td>{filtro.precioventa}</td>
@@ -579,6 +582,7 @@ const FiltrosU = () => {
         </div>
     );
 };
+
 
 // Nuevo componente Tabaco
 

@@ -1,0 +1,4 @@
+/* En tu archivo CSS o dentro de un bloque <style> */
+.dropdown-toggle-hidden-arrow::after {
+    display: none;
+}

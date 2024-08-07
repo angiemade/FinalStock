@@ -4,11 +4,11 @@ import { Button, Dropdown } from 'react-bootstrap';
 import axios from 'axios';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import backgroundImage from '../../assets/homeu.png';
+import '../Home/home.css'; // Asegúrate de importar tu archivo CSS
 
 export default function HomeU() {
     const navigate = useNavigate();
 
-    
     const handleTabacoClick = () => {
         navigate('/tabaco');
     };
@@ -45,7 +45,7 @@ export default function HomeU() {
                     </Button>
                 </div>
                 <Dropdown>
-                    <Dropdown.Toggle variant="light" id="dropdown-basic" style={{ width: '40px', height: '40px' }}>
+                    <Dropdown.Toggle variant="light" id="dropdown-basic" className="dropdown-toggle-hidden-arrow" style={{ width: '40px', height: '40px' }}>
                         <i className="bi bi-person-fill"></i>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
@@ -53,11 +53,11 @@ export default function HomeU() {
                         <Dropdown.Divider />
                         <Dropdown.Item onClick={handleCerrarSesion} className="btnCerrarSesion">
                             Cerrar sesión
-                        </Dropdown.Item>
+                         </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
             </div>
-            
+
             {/* Logo and text */}
             <div className="d-flex flex-column align-items-center justify-content-center flex-grow-1">
                 <img src={backgroundImage} alt="Mr. Vulpini" className="img-fluid" style={{ maxWidth: '50%', height: 'auto' }} />

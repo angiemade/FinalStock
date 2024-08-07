@@ -301,7 +301,7 @@ const Papeles = () => {
                     ))}
                 </tbody>
             </table>
-            <ContactForm />
+            {/* <ContactForm /> */}
         </div>
     );
 };
@@ -500,35 +500,39 @@ const PapelesU = () => {
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Código"
                     value={codigo}
                     onChange={(e) => setCodigo(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Nombre"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Precio Venta"
                     value={precioventa}
                     onChange={(e) => setPrecioVenta(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Precio Compra"
                     value={preciocompra}
                     onChange={(e) => setPrecioCompra(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
@@ -575,6 +579,7 @@ const PapelesU = () => {
         </div>
     );
 };
+
 
 const Lillos = () => {
     const [role, setRole] = useState(null);

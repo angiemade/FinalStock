@@ -238,12 +238,15 @@ const Crud = () => {
         producto.stock.toString().toLowerCase().includes(search.toLowerCase())
     );
 
+    
+
     return (
         <div className="container">
             <div className="d-flex justify-content-end mt-2">
                 <button className="btn btn-light" onClick={handlebtnAtrasClick}>
                     <i className="bi bi-arrow-left-circle-fill" style={{ fontSize: '1.5rem' }}></i>
                 </button>
+    
             </div>
             <h1 className="my-4">Tabacos de Pipa</h1>
             <div className="mb-3">
@@ -326,7 +329,7 @@ const Crud = () => {
                     ))}
                 </tbody>
             </table>
-            <ContactForm />
+            {/* <ContactForm /> */}
         </div>
     );
 }
@@ -525,35 +528,39 @@ const CrudU = () => {
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Código"
                     value={codigo}
                     onChange={(e) => setCodigo(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Nombre"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Precio Venta"
                     value={precioventa}
                     onChange={(e) => setPrecioVenta(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
-                    className="form-control mb-2 readonly"
+                    className="form-control mb-2"
                     placeholder="Precio Compra"
                     value={preciocompra}
                     onChange={(e) => setPrecioCompra(e.target.value)}
                     readOnly
+                    style={{ backgroundColor: '#e9ecef' }}
                 />
                 <input
                     type="text"
@@ -601,6 +608,8 @@ const CrudU = () => {
         </div>
     );
 };
+
+
 
 const Tabaco = () => {
     const [role, setRole] = useState(null);

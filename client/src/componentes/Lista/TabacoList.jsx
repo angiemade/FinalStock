@@ -200,7 +200,7 @@ const TabacoList = () => {
                             <td>{tabaco.preciocompra}</td>
                             <td>{tabaco.stock}</td>
                             <td>{tabaco.stock_sistema}</td>
-                            <td>{tabaco.stock - tabaco.stock_sistema}</td> {/* Calcular y mostrar el número de ajuste */}
+                            <td>{tabaco.stock - (tabaco.stock_sistema)}</td> {/* Calcular y mostrar el número de ajuste */}
                             <td>
                                 <button className="btn btn-warning btn-sm" onClick={() => iniciarEdicion(tabaco)}><i className="bi bi-pencil"></i></button>
                                 <button className="btn btn-danger btn-sm" onClick={() => eliminarTabaco(tabaco.id)}><i className="bi bi-trash"></i></button>
