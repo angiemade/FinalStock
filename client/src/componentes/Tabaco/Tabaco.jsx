@@ -238,7 +238,6 @@ const Crud = () => {
         producto.stock.toString().toLowerCase().includes(search.toLowerCase())
     );
 
-    
 
     return (
         <div className="container">

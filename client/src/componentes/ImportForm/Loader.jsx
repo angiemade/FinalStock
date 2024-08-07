@@ -1,5 +1,5 @@
 import React from "react";
-import "./Loader.css";  // Asegúrate de que el nombre del archivo y la extensión sean correctos
+import "./Loader.css";  
 
 const Loader = () => {
   return (
@@ -9,6 +9,7 @@ const Loader = () => {
     </div>
   );
 };
+
 
 
 export default Loader;

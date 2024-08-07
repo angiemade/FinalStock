@@ -1,11 +1,11 @@
 const express = require('express');
 const mysql = require('mysql2');
-const cors = require('cors');
-const bcrypt = require('bcrypt');
+const cors = require('cors'); //para q la api sea accesible desde otros dominios
+const bcrypt = require('bcrypt'); //para la contraseña asegura la info del usuario
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
-dotenv.config();
+dotenv.config(); //carga variables de entorno (almacena info sensible)desde .env
 
 const app = express();
 app.use(cors());
@@ -80,7 +80,7 @@ app.post('/logout', (req, res) => {
     res.json({ msg: 'Sesión cerrada' });
 });
 
-// Middleware de autenticación
+// Middleware de autenticación verifica los tokens 
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
